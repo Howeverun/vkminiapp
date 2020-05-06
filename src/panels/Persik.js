@@ -8,7 +8,7 @@ import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 
 
-import persik from '../img/tomato.PNG';
+import persik from '../img/screen6.jpg';
 import './Persik.css';
 
 const osName = platform();

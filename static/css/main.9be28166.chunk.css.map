@@ -1,0 +1,1 @@
+{"version":3,"sources":["Secondpersik.css"],"names":[],"mappings":"AAAA,sBACE,aAAc,CACd,SAAU,CACV,eAAgB,CAChB,gBACF","file":"main.9be28166.chunk.css","sourcesContent":[".Secondpersik {\n  display: block;\n  width: 30%;\n  max-width: 240px;\n  margin: 20px auto;\n}\n"]}

@@ -9,7 +9,7 @@ import Icon24Back from '@vkontakte/icons/dist/24/back';
 
 
 import secondpersik from '../img/secondpersik.jpg';
-import './Secondpersikgit .css';
+import './Secondpersik.css';
 
 const osName = platform();
 

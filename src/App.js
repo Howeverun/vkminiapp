@@ -11,7 +11,7 @@ import Secondpersik from './panels/Secondpersik';
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
-	const [popout, setPopout] = useState(null);//useState(<ScreenSpinner size='large'/>);
+	const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
 
 	useEffect(() => {
 		bridge.subscribe(({ detail: { type, data }}) => {

@@ -26,9 +26,7 @@ const Home = ({ id, go, fetchedUser }) => (
 				<Button size="xl" level="2" onClick={go} data-to="persik">
 					Show me the Persik, please
 				</Button>
-                <p align="center">
-
-                </p>
+                <p align="center"> </p>
 				<Button size="xl" level="2" onClick={go} data-to="secondpersik">
 					Show me the secondPersik, please
 				</Button>

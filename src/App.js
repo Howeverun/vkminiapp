@@ -7,11 +7,16 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home';
 import Persik from './panels/Persik';
 import Secondpersik from './panels/Secondpersik';
+import Artempractiсe from './panels/Artempractiсe';
+
+import Boryapractiсe from './panels/Boryapractiсe';
+import Dashapractiсe from './panels/Dashapractiсe';
+import Linapractiсe from './panels/Linapractiсe';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
-	const [popout, setPopout] = useState(<ScreenSpinner size='large'/>);
+	const [popout, setPopout] = useState(null);//useState(<ScreenSpinner size='large'/>);
 
 	useEffect(() => {
 		bridge.subscribe(({ detail: { type, data }}) => {
@@ -38,6 +43,11 @@ const App = () => {
 			<Home id='home' fetchedUser={fetchedUser} go={go} />
 			<Persik id='persik' go={go} />
 			<Secondpersik id='secondpersik' go={go} />
+			<Artempractiсe id='artempractiсe' go={go} />
+
+			<Boryapractiсe id='boryapractiсe' go={go} />
+			<Dashapractiсe id='dashapractiсe' go={go} />
+			<Linapractiсe id='linapractiсe' go={go} />
 		</View>
 	);
 }

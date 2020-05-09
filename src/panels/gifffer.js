@@ -1,1 +1,0 @@
-<img data-gifffer="image.gif" />

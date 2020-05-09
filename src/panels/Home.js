@@ -8,6 +8,13 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
+function startalert() {
+    let timerId = setInterval(() => alert('tick'), 2000);
+    }
+function stopatert() {
+//setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
+    }
+
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Example</PanelHeader>
@@ -30,6 +37,34 @@ const Home = ({ id, go, fetchedUser }) => (
 				<Button size="xl" level="2" onClick={go} data-to="secondpersik">
 					Show me the Gif, please
 				</Button>
+				<p align="center"> </p>
+				<Button size="xl" level="2" onClick={startalert}>
+					запуск таймера(начнётся вывод уведомлений, как на телефонах хз)
+				</Button>
+				<p align="center"> </p>
+				<Button size="xl" level="2" onClick={go} data-to="artempractiсe">
+					Artempractiсe
+				</Button>
+				<p align="center"> </p>
+
+				<p align="center"> </p>
+				<Button size="xl" level="2" onClick={go} data-to="boryapractiсe">
+					Boryapractiсe
+				</Button>
+				<p align="center"> </p>
+
+				<p align="center"> </p>
+				<Button size="xl" level="2" onClick={go} data-to="dashapractiсe">
+					Dashapractiсe
+				</Button>
+				<p align="center"> </p>
+
+				<p align="center"> </p>
+				<Button size="xl" level="2" onClick={go} data-to="linapractiсe">
+					Linapractiсe
+				</Button>
+				<p align="center"> </p>
+
 			</Div>
 		</Group>
 	</Panel>

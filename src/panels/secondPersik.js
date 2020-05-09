@@ -7,11 +7,11 @@ import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 
-
-import secondpersik from '../img/secondpersik.jpg';
+import secondpersik from '../img/giphy.gif';
 import './Secondpersik.css';
 
 const osName = platform();
+
 
 const Secondpersik = props => (
 	<Panel id={props.id}>
@@ -20,10 +20,10 @@ const Secondpersik = props => (
 				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</PanelHeaderButton>}
 		>
-			Persik
+			Gif
 		</PanelHeader>
 		<img className="Secondpersik" src={secondpersik} alt="Persik The Cat"/>
-	</Panel>
+			</Panel>
 );
 
 Secondpersik.propTypes = {

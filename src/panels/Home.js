@@ -28,7 +28,7 @@ const Home = ({ id, go, fetchedUser }) => (
 				</Button>
                 <p align="center"> </p>
 				<Button size="xl" level="2" onClick={go} data-to="secondpersik">
-					Show me the secondPersik, please
+					Show me the Gif, please
 				</Button>
 			</Div>
 		</Group>

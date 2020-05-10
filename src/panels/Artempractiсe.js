@@ -12,78 +12,78 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Tooltip from '@vkontakte/vkui/dist/components/Tooltip/Tooltip';
-
 import { FormLayout, FormLayoutGroup, Input, Checkbox, Link } from '@vkontakte/vkui';
-
-
-
 import '@vkontakte/vkui/dist/vkui.css';
+
+import { View } from '@vkontakte/vkui';
+
+
+import persik from '../img/screen6.jpg';
+import './Persik.css';
+
 
 const osName = platform();
 
-function abs(){
 
+function startalert() {
+    let timerId = setInterval(() => alert('tick'), 2000);
+    }
+function stopatert() {
+//setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
+    }
 
-}
-
-const Artempractiсe = props => (
-	<Panel id={props.id}>
+const Artempractiсe = ({ id, go, fetchedUser }) => (
+<Panel id={id}>
 		<PanelHeader
-			left={<PanelHeaderButton onClick={props.go} data-to="home">
+			left={<PanelHeaderButton onClick={go} data-to="home">
 				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
-			</PanelHeaderButton>}
-		>
+			</PanelHeaderButton>}>
 			Artempractiсe
 		</PanelHeader>
+		{fetchedUser &&
+		<Group title="User Data Fetched with VK Bridge">
+			<Cell
+				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
+				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
+			>
+				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
+			</Cell>
+		</Group>}
 
-
-
-<p align="center"> </p>
-				/////////////////////
-				<p align="center"> </p>
-				<p align="center"> </p>
-
-          <Cell>Hello</Cell>
-          <Cell>World</Cell>
-        <FormLayout>
-          <FormLayoutGroup top="Пароль" bottom="Пароль может содержать только латинские буквы и цифры.">
-            <Input type="password" placeholder="Введите пароль" />
-            <Input type="password" placeholder="Повторите пароль" />
-          </FormLayoutGroup>
-        </FormLayout>
-
-          <Tooltip text="ъеъ">
-            <Button size="l" level="2" onClick="abs()" data-to="home">
-            Друзья </Button>
-          </Tooltip>
-
-
-              <PanelHeader>Checkbox</PanelHeader>
-              <FormLayout>
-                <Checkbox>Я согласен со всем, что вы <Link >там</Link> понаписали</Checkbox>
-              </FormLayout>
-
-
-
-            <FormLayout>
-              <FormLayoutGroup top="Фамилия">
-                <Input type="text" defaultValue="Петров" />
-                <Input type="text" defaultValue="Иванов" align="center" />
-                <Input type="text" defaultValue="Сидоров" align="right" />
-              </FormLayoutGroup>
-            </FormLayout>
-
+		<Group title="Navigation">
+			<Div>
+				<Button size="xl" level="2" onClick={go} data-to="persik" >
+					Show me the Persik, please
+				</Button>
                 <p align="center"> </p>
-                <p align="center"> </p>
-				/////////////////////
+				<Button size="xl" level="2" onClick={go} data-to="secondpersik">
+					Show me the Gif, please
+				</Button>
+				<p align="center"> </p>
+				<Button size="xl" level="2" onClick={startalert}>
+					запуск таймера(начнётся вывод уведомлений, как на телефонах хз)
+				</Button>
+				<p align="center"> </p>
 
 
-		</Panel>
+
+
+			</Div>
+		</Group>
+	</Panel>
 );
 
 Artempractiсe.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
+	fetchedUser: PropTypes.shape({
+		photo_200: PropTypes.string,
+		first_name: PropTypes.string,
+		last_name: PropTypes.string,
+		city: PropTypes.shape({
+			title: PropTypes.string,
+		}),
+	}),
 };
 
 export default Artempractiсe;

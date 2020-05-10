@@ -11,11 +11,20 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import Tooltip from '@vkontakte/vkui/dist/components/Tooltip/Tooltip';
+
+import { FormLayout, FormLayoutGroup, Input, Checkbox, Link } from '@vkontakte/vkui';
+
+
 
 import '@vkontakte/vkui/dist/vkui.css';
 
 const osName = platform();
 
+function abs(){
+
+
+}
 
 const Artempractiсe = props => (
 	<Panel id={props.id}>
@@ -36,6 +45,33 @@ const Artempractiсe = props => (
 
           <Cell>Hello</Cell>
           <Cell>World</Cell>
+        <FormLayout>
+          <FormLayoutGroup top="Пароль" bottom="Пароль может содержать только латинские буквы и цифры.">
+            <Input type="password" placeholder="Введите пароль" />
+            <Input type="password" placeholder="Повторите пароль" />
+          </FormLayoutGroup>
+        </FormLayout>
+
+          <Tooltip text="ъеъ">
+            <Button size="l" level="2" onClick="abs()" data-to="home">
+            Друзья </Button>
+          </Tooltip>
+
+
+              <PanelHeader>Checkbox</PanelHeader>
+              <FormLayout>
+                <Checkbox>Я согласен со всем, что вы <Link >там</Link> понаписали</Checkbox>
+              </FormLayout>
+
+
+
+            <FormLayout>
+              <FormLayoutGroup top="Фамилия">
+                <Input type="text" defaultValue="Петров" />
+                <Input type="text" defaultValue="Иванов" align="center" />
+                <Input type="text" defaultValue="Сидоров" align="right" />
+              </FormLayoutGroup>
+            </FormLayout>
 
                 <p align="center"> </p>
                 <p align="center"> </p>

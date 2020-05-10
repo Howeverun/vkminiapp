@@ -8,7 +8,6 @@ import Home from './panels/Home';
 import Persik from './panels/Persik';
 import Secondpersik from './panels/Secondpersik';
 import Artempractiсe from './panels/Artempractiсe';
-
 import Boryapractiсe from './panels/Boryapractiсe';
 import Dashapractiсe from './panels/Dashapractiсe';
 import Linapractiсe from './panels/Linapractiсe';
@@ -44,7 +43,6 @@ const App = () => {
 			<Persik id='persik' go={go} />
 			<Secondpersik id='secondpersik' go={go} />
 			<Artempractiсe id='artempractiсe' go={go} />
-
 			<Boryapractiсe id='boryapractiсe' go={go} />
 			<Dashapractiсe id='dashapractiсe' go={go} />
 			<Linapractiсe id='linapractiсe' go={go} />

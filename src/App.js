@@ -27,6 +27,7 @@ import Modal2 from "./panels/Modal2";
 import Icon24Services from "@vkontakte/icons/dist/24/services";
 import Icon24Flash from "@vkontakte/icons/dist/24/flash";
 
+
 const App = () => (
 
 
@@ -57,6 +58,15 @@ const App = () => (
 				icon={<Icon24Flash/>}
 			>
 				<Panel3 id="panel3"/>
+			</Page>
+			<Page
+				id="you_are"
+				title="О тебе"
+				activePanel="panel3"
+				icon={<Icon24Flash/>}
+			>
+			    const user = await bridge.send('VKWebAppGetUserInfo');
+			    setUser(user);
 			</Page>
 		</Tabbar>
 		<Page id="page2" activePanel="panel4">

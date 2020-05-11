@@ -28,7 +28,7 @@ const Panel1 = ({ id, navigator }) => {
 	return (
 		<Panel id={id}>
 			<PanelHeader>
-				VKUI Navigator
+				Product_Name
 			</PanelHeader>
 			<Group title="Основы навигации">
 				<Div style={{ display: "grid", gridRowGap: "10px" }}>

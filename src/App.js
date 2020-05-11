@@ -9,7 +9,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home';
 import Persik from './panels/Persik';
 import Secondpersik from './panels/Secondpersik';
-import Artempractiсe from './panels/Artempractiсe';
+import Artempractiсe2 from './panels/Artempractiсe2';
 import Boryapractiсe from './panels/Boryapractiсe';
 import Dashapractiсe from './panels/Dashapractiсe';
 import Linapractiсe from './panels/Linapractiсe';
@@ -51,6 +51,7 @@ const App = () => (
 				<Panel1 id="panel1"/>
 				<Panel2 id="panel2"/>
 			</Page>
+
 			<Page
 				id="settings"
 				title="Модальные окна"
@@ -59,14 +60,14 @@ const App = () => (
 			>
 				<Panel3 id="panel3"/>
 			</Page>
+
 			<Page
 				id="you_are"
 				title="О тебе"
-				activePanel="panel3"
+				activePanel="Artempractiсe2"
 				icon={<Icon24Flash/>}
 			>
-			    const user = await bridge.send('VKWebAppGetUserInfo');
-			    setUser(user);
+			<Artempractiсe2 id="Artempractiсe2"/>
 			</Page>
 		</Tabbar>
 		<Page id="page2" activePanel="panel4">

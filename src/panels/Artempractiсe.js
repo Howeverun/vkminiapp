@@ -35,7 +35,7 @@ function stopatert() {
 const Artempractiсe = ({ id, go, fetchedUser }) => (
 <Panel id={id}>
 		<PanelHeader
-			left={<PanelHeaderButton onClick={go} data-to="home">
+			left={<PanelHeaderButton onClick={() => navigator.go("panel1")} data-to="home">
 				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</PanelHeaderButton>}>
 			Artempractiсe

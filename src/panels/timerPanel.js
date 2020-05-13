@@ -1,0 +1,32 @@
+import React from "react";
+
+import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
+import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader";
+import Button from "@vkontakte/vkui/dist/components/Button/Button";
+import Group from "@vkontakte/vkui/dist/components/Group/Group";
+import Div from "@vkontakte/vkui/dist/components/Div/Div";
+import PropTypes from "prop-types";
+import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
+import {IOS} from "@vkontakte/vkui";
+
+const timerPanel = ({ id, navigator })  => (
+    <Panel id={id}>
+        <PanelHeader>
+
+            timeeeer
+        </PanelHeader>
+            AAAAAAA
+    </Panel>
+    /*ReactDOM.render(
+        <div style={{
+            border: "8px solid",
+            borderImage: "linear-gradient(-45deg, #743ad5, #d53a9d) 1"
+        }}>
+            Время:<br/>
+            {new Date().toLocaleTimeString()}
+        </div>, document.getElementById('root'));
+}, 1000); */
+);
+
+
+export default timerPanel;

@@ -6,7 +6,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Persik from './panels/Persik';
-import SecondPersik from './panels/Secondpersik';
+//import SecondPersik from './panels/Secondpersik';
 import Artempractiсe2 from './panels/Artempractiсe2';
 import Boryapractiсe from './panels/Boryapractiсe';
 import Dashapractiсe from './panels/Dashapractiсe';
@@ -21,6 +21,7 @@ import Panel3 from "./panels/Panel3";
 import Panel4 from "./panels/Panel4";
 import Modal1 from "./panels/Modal1";
 import Modal2 from "./panels/Modal2";
+import timerPanel from "./panels/timerPanel";
 
 import Icon24Services from "@vkontakte/icons/dist/24/services";
 import Icon24Flash from "@vkontakte/icons/dist/24/flash";

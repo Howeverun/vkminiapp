@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import View from '@vkontakte/vkui/dist/components/View/View';
@@ -8,7 +6,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Persik from './panels/Persik';
-import secondPersik from './panels/secondPersik ';
+import SecondPersik from './panels/Secondpersik';
 import Artempractiсe2 from './panels/Artempractiсe2';
 import Boryapractiсe from './panels/Boryapractiсe';
 import Dashapractiсe from './panels/Dashapractiсe';

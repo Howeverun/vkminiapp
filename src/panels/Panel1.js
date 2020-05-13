@@ -22,6 +22,12 @@ const Panel1 = ({ id, navigator }) => {
 					description: result.description
 				});
 			})
+			.then((result) => {
+				navigator.go("Timerpanel", {
+					owner: result.owner && result.owner.login,
+					description: result.description
+				});
+			})
 			.catch(() => navigator.hideLoader())
 	};
 
@@ -34,7 +40,7 @@ const Panel1 = ({ id, navigator }) => {
 				<Div style={{ display: "grid", gridRowGap: "10px" }}>
 					<Button
 						size="xl"
-						onClick={() => navigator.go("timerPanel")}
+						onClick={() => navigator.go("Timerpanel")}
 					>
 						Перейти к таймеру
 					</Button>

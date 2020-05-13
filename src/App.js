@@ -6,13 +6,14 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Persik from './panels/Persik';
-//import SecondPersik from './panels/Secondpersik';
+import SecondPersik from './panels/secondPersik';
 import Artempractiсe2 from './panels/Artempractiсe2';
 import Boryapractiсe from './panels/Boryapractiсe';
 import Dashapractiсe from './panels/Dashapractiсe';
 import Linapractiсe from './panels/Linapractiсe';
-
-
+//##########
+import Timerpanel from './panels/Timerpanel';
+//##########
 import { Stack, Page, Tabbar } from "vkui-navigator/dist";
 
 import Panel1 from "./panels/Panel1";
@@ -21,7 +22,7 @@ import Panel3 from "./panels/Panel3";
 import Panel4 from "./panels/Panel4";
 import Modal1 from "./panels/Modal1";
 import Modal2 from "./panels/Modal2";
-import timerPanel from "./panels/timerPanel";
+
 
 import Icon24Services from "@vkontakte/icons/dist/24/services";
 import Icon24Flash from "@vkontakte/icons/dist/24/flash";
@@ -49,6 +50,7 @@ const App = () => (
 			>
 				<Panel1 id="panel1"/>
 				<Panel2 id="panel2"/>
+				<Timerpanel id="Timerpanel"/>
 			</Page>
 
 			<Page

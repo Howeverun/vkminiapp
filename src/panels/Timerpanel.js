@@ -9,11 +9,27 @@ import PropTypes from "prop-types";
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
 import {IOS} from "@vkontakte/vkui";
 
+
+const timerPanel = ({ id, navigator }) => (
+	<Panel id={id}>
+		<PanelHeader>
+		    timeeeer
+		</PanelHeader>
+		 AAAAAAA
+
+		<Group title="Параметры">
+			<Div>
+				{JSON.stringify(navigator.params)}
+			</Div>
+		</Group>
+	</Panel>
+);
+/*
 const timerPanel = ({ id, navigator })  => (
     <Panel id={id}>
         <PanelHeader>
 
-            timeeeer
+         timeeeer
         </PanelHeader>
             AAAAAAA
     </Panel>
@@ -26,7 +42,8 @@ const timerPanel = ({ id, navigator })  => (
             {new Date().toLocaleTimeString()}
         </div>, document.getElementById('root'));
 }, 1000); */
-);
+
+//);
 
 
 export default timerPanel;

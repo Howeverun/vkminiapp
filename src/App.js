@@ -8,7 +8,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Persik from './panels/Persik';
-import secondPersik from './panels/secondPersik ';
+//import secondPersik from './panels/secondPersik ';
 import Artempractiсe2 from './panels/Artempractiсe2';
 import Boryapractiсe from './panels/Boryapractiсe';
 import Dashapractiсe from './panels/Dashapractiсe';

@@ -34,6 +34,12 @@ const Panel1 = ({ id, navigator }) => {
 				<Div style={{ display: "grid", gridRowGap: "10px" }}>
 					<Button
 						size="xl"
+						onClick={() => navigator.go("timerPanel")}
+					>
+						Перейти к таймеру
+					</Button>
+					<Button
+						size="xl"
 						onClick={() => navigator.go("panel2")}
 					>
 						Перейти на панель 2

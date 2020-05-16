@@ -15,8 +15,7 @@ function countdown(){
 	let sec = 0;
 	let min = 0;
 	let min_to = 25;
-	let next_min = 2;
-	setInterval(function() {
+	let id = setInterval(function() {
 		let first = ""
 		let second = ""
 		if(min<10){
@@ -26,14 +25,22 @@ function countdown(){
 			second = "0"
 		}
 		division.textContent = first + min + " : " + second + sec;
-	
+
 		if(sec === 59){
 			sec = 0;
 			min++;
 			if (min===min_to){
 				notify.textContent = "Vse"
+				if(min<10){
+					first = "0"
+				}
+				if(sec<10){
+					second = "0"
+				}
+				division.textContent = first + min + " : " + second + sec;
 				min = 0;
 				sec = 0;
+				clearInterval(id);
 			}
 		}
 		sec++;

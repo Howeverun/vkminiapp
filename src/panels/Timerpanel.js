@@ -9,6 +9,19 @@ import PropTypes from "prop-types";
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
 import {IOS} from "@vkontakte/vkui";
 
+function tmp_output(min, sec) {
+	let division = document.getElementById("time")
+	let first = ""
+	let second = ""
+	if(min<10){
+		first = "0"
+	}
+	if(sec<10){
+		second = "0"
+	}
+	division.textContent = first + min + " : " + second + sec;
+}
+
 function countdown(){
 	let division = document.getElementById("time")
 	let notify = document.getElementById("notify")

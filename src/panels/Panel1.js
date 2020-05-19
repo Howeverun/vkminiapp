@@ -5,6 +5,8 @@ import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader
 import Button from "@vkontakte/vkui/dist/components/Button/Button";
 import Group from "@vkontakte/vkui/dist/components/Group/Group";
 import Div from "@vkontakte/vkui/dist/components/Div/Div";
+import { Redirect } from 'react';
+import Link from "@vkontakte/vkui/dist/components/Link/Link";
 
 const Panel1 = ({ id, navigator }) => {
 	const showSpinner = () => {
@@ -30,6 +32,8 @@ const Panel1 = ({ id, navigator }) => {
 			})
 			.catch(() => navigator.hideLoader())
 	};
+ //<Redirect to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />
+	//			    <Link to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />;
 
 	return (
 		<Panel id={id}>

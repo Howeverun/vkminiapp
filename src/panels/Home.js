@@ -38,7 +38,7 @@ const Home = ({ id, go, fetchedUser }) => (
 					Show me the Gif, please
 				</Button>
 				<p align="center"> </p>
-				<Button size="xl" level="2" onClick={startalert}>
+				<Button size="xl" level="2" onClick={go} data-to="timerpanel">
 					запуск таймера(начнётся вывод уведомлений, как на телефонах хз)
 				</Button>
 				<p align="center"> </p>

@@ -47,9 +47,6 @@ const timerPanel = ({ id, navigator }) => (
 		    timeeeer
 		</PanelHeader>
 		<Group title="Параметры">
-			<Div>
-				{JSON.stringify(navigator.params)}
-			</Div>
 		</Group>
 		<Group title="Timer">
 			<Button onClick={countdown}> Начать таймер </Button>

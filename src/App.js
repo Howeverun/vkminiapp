@@ -16,8 +16,8 @@ import Intro from './panels/Intro';
 
 
 const ROUTES = {
-	HOME: 'home',
-	INTRO: 'intro',
+	HOME: 'Home',
+	INTRO: 'Intro',
 };
 
 

@@ -46,7 +46,7 @@ const Temuk = props => (
 );
 
 Temuk.propTypes = {
-	id: PropTypes.string.isRequired,a
+	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 };
 

@@ -1,89 +1,89 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { platform, IOS } from '@vkontakte/vkui';
-import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
-import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton';
-import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
-import Icon24Back from '@vkontakte/icons/dist/24/back';
-import Button from '@vkontakte/vkui/dist/components/Button/Button';
-import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
-import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
-import Tooltip from '@vkontakte/vkui/dist/components/Tooltip/Tooltip';
-import { FormLayout, FormLayoutGroup, Input, Checkbox, Link } from '@vkontakte/vkui';
-import '@vkontakte/vkui/dist/vkui.css';
+import React from "react";
+import { Component } from 'react';
+import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
+import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader";
+import Button from "@vkontakte/vkui/dist/components/Button/Button";
+import Group from "@vkontakte/vkui/dist/components/Group/Group";
+import Div from "@vkontakte/vkui/dist/components/Div/Div";
+import Link from "@vkontakte/vkui/dist/components/Link/Link";
+import { Redirect } from 'react';
 
-import { View } from '@vkontakte/vkui';
+const Panel1 = ({ id, navigator }) => {
+	const showSpinner = () => {
+		navigator.showLoader();
+		setTimeout(() => navigator.hideLoader(), 2500);
+	};
 
 
-import persik from '../img/screen6.jpg';
-import './Persik.css';
+	const loadData = () => {
+		navigator.showLoader();
+		fetch("https://api.github.com/repos/hit2hat/vkui-navigator")
+			.then((result) => result.json())
+			.then((result) => {
+				navigator.go("panel2", {
+					owner: result.owner && result.owner.login,
+					description: result.description
+				});
+			})
+			.catch(() => navigator.hideLoader())
+	};
 
+	return (
+		<Panel id={id}>
+			<PanelHeader>
+				Artempractice
+			</PanelHeader>
+			<Group title="Основы навигации">
+				<Div style={{ display: "grid", gridRowGap: "10px" }}>
+				    //<Redirect to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />
+				    //<Link to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />;
+					<Button
+						size="xl"
+						onClick={() => navigator.go("Panel2")}
+					>
+						Перейти на панель 2
+					</Button>
+					<Button
+						size="xl"
+						onClick={() => navigator.go("panel2", { id: "someid", data: [ 0, 1, 2 ] })}
+					>
+						Перейти на панель 2 + параметры
+					</Button>
+					<Button
+						size="xl"
+						onClick={loadData}
+					>
+						Перейти на панель 2 + загрузка данных
+					</Button>
 
-const osName = platform();
+					<Button
+						size="xl"
+						onClick={showSpinner}
+					>
+						Показать спиннер (исчезнет сам)
+					</Button>
+				</Div>
+			</Group>
 
+			<Group title="Страницы">
+				<Div style={{ display: "grid", gridRowGap: "10px" }}>
+					<Button
+						size="xl"
+						onClick={() => navigator.goPage("page2")}
+					>
+						Показать Page2
+					</Button>
+					<Button
+						size="xl"
+						onClick={() => navigator.goPage("page2", { param1: "hello" })}
+					>
+						Показать Page2 + параметры
+					</Button>
+				</Div>
+			</Group>
+		</Panel>
 
-function startalert() {
-    let timerId = setInterval(() => alert('tick'), 2000);
-    }
-function stopatert() {
-//setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
-    }
-
-const Artempractiсe = ({ id, go, fetchedUser }) => (
-<Panel id={id}>
-		<PanelHeader
-			left={<PanelHeaderButton onClick={() => navigator.go("panel1")} data-to="home">
-				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
-			</PanelHeaderButton>}>
-			Artempractiсe
-		</PanelHeader>
-		{fetchedUser &&
-		<Group title="User Data Fetched with VK Bridge">
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
-		</Group>}
-
-		<Group title="Navigation">
-			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik" >
-					Show me the Persik, please
-				</Button>
-                <p align="center"> </p>
-				<Button size="xl" level="2" onClick={go} data-to="secondpersik">
-					Show me the Gif, please
-				</Button>
-				<p align="center"> </p>
-				<Button size="xl" level="2" onClick={startalert}>
-					запуск таймера(начнётся вывод уведомлений, как на телефонах хз)
-				</Button>
-				<p align="center"> </p>
-
-
-
-
-			</Div>
-		</Group>
-	</Panel>
-);
-
-Artempractiсe.propTypes = {
-	id: PropTypes.string.isRequired,
-	go: PropTypes.func.isRequired,
-	fetchedUser: PropTypes.shape({
-		photo_200: PropTypes.string,
-		first_name: PropTypes.string,
-		last_name: PropTypes.string,
-		city: PropTypes.shape({
-			title: PropTypes.string,
-		}),
-	}),
+	);
 };
 
-export default Artempractiсe;
+export default Panel1;

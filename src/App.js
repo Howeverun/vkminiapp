@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import View from '@vkontakte/vkui/dist/components/View/View';
@@ -14,9 +12,17 @@ import Boryapractiсe from './panels/Boryapractiсe';
 import Dashapractiсe from './panels/Dashapractiсe';
 import Linapractiсe from './panels/Linapractiсe';
 import Timerpanel from './panels/Timerpanel';
+import Intro from './panels/Intro';
+
+
+const ROUTES = {
+	HOME: 'home',
+	INTRO: 'intro',
+};
+
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('home');
+	const [activePanel, setActivePanel] = useState(ROUTES.INTRO); //стартовая страница
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(null);//useState(<ScreenSpinner size='large'/>);
 
@@ -50,6 +56,8 @@ const App = () => {
 			<Dashapractiсe id='dashapractiсe' go={go} />
 			<Linapractiсe id='linapractiсe' go={go} />
 			<Timerpanel id='timerpanel' go={go} />
+
+			<Intro id='intro' go={go} />
 		</View>
 	);
 }

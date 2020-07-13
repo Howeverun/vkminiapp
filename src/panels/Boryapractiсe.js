@@ -46,7 +46,7 @@ const Boryapractiсe = props => (
 );
 
 Boryapractiсe.propTypes = {
-	id: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,a
 	go: PropTypes.func.isRequired,
 };
 

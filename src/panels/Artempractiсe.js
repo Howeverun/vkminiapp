@@ -31,12 +31,12 @@ const Panel1 = ({ id, navigator }) => {
 	return (
 		<Panel id={id}>
 			<PanelHeader>
-				Artempractice
+				Artempractice 1
 			</PanelHeader>
 			<Group title="Основы навигации">
 				<Div style={{ display: "grid", gridRowGap: "10px" }}>
-				    //<Redirect to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />
-				    //<Link to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />;
+				    <Redirect to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />
+				    <Link to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />;
 					<Button
 						size="xl"
 						onClick={() => navigator.go("Panel2")}

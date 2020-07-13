@@ -30,6 +30,12 @@ const Panel1 = ({ id, navigator }) => {
 					description: result.description
 				});
 			})
+			.then((result) => {
+				navigator.go("Artempractiсe", {
+					owner: result.owner && result.owner.login,
+					description: result.description
+				});
+			})
 			.catch(() => navigator.hideLoader())
 	};
  //<Redirect to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />
@@ -42,6 +48,34 @@ const Panel1 = ({ id, navigator }) => {
 			</PanelHeader>
 			<Group title="Основы навигации">
 				<Div style={{ display: "grid", gridRowGap: "10px" }}>
+					<Button
+						size="xl"
+						onClick={() => navigator.go("Timerpanel")}
+					>
+						Перейти к таймеру
+					</Button>
+
+					<Button
+						size="xl"
+						onClick={() => navigator.go("Artempractiсe")}
+					>
+						Temuk testit
+					</Button>
+
+					<Button
+						size="xl"
+						onClick={() => navigator.go("Timerpanel")}
+					>
+						Перейти к таймеру
+					</Button>
+
+					<Button
+						size="xl"
+						onClick={() => navigator.go("Timerpanel")}
+					>
+						Перейти к таймеру
+					</Button>
+
 					<Button
 						size="xl"
 						onClick={() => navigator.go("Timerpanel")}

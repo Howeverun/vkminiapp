@@ -31,7 +31,7 @@ const Panel1 = ({ id, navigator }) => {
 	return (
 		<Panel id={id}>
 			<PanelHeader>
-				Artempractice 1
+				Artempractice
 			</PanelHeader>
 			<Group title="Основы навигации">
 				<Div style={{ display: "grid", gridRowGap: "10px" }}>

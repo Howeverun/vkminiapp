@@ -9,7 +9,7 @@ import Div from "@vkontakte/vkui/dist/components/Div/Div";
 const Panel3 = ({ id, navigator }) => (
 	<Panel id={id}>
 		<PanelHeader>
-			VKUI Navigator
+			Модальные окна
 		</PanelHeader>
 		<Group title="Модальные окна">
 			<Div style={{ display: "grid", gridRowGap: "10px" }}>

@@ -44,11 +44,12 @@ const App = () => (
 			<Modal2 id="modal2" title="Название из title"/>
 		]}
 	>
-		<Tabbar
+
+		<Tabbar  //нижние main-тапбары
 			id="main"
 			activeStory="home"
 		>
-			<Page
+			<Page //первый тапбар
 				id="home"
 				title="Основы"
 				activePanel="panel1"
@@ -60,7 +61,7 @@ const App = () => (
 				<Artempractiсe id="Artempractiсe"/>
 			</Page>
 
-			<Page
+			<Page //второй тапбар
 				id="settings"
 				title="Модальные окна"
 				activePanel="panel3"
@@ -70,9 +71,7 @@ const App = () => (
 			</Page>
 
 		</Tabbar>
-		<Page id="page2" activePanel="panel4">
-			<Panel4 id="panel4"/>
-		</Page>
+
 	</Stack>
 
 

@@ -42,10 +42,10 @@ const Panel1 = ({ id, navigator }) => {
 	//<Link to="https://oauth.vk.com/authorize?client_id=7450214&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52" />;
 
 	return (
-		<Panel id={id}>       // \|/Заголовок
-			<PanelHeader>
-				Главная страница
-			</PanelHeader>
+		<Panel
+		<PanelHeader>
+            Главная страница
+		</PanelHeader>
 			<Group title="Основы навигации">
 				<Div style={{ display: "grid", gridRowGap: "10px" }}>
 					<Button

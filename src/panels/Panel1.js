@@ -2,11 +2,17 @@ import React from "react";
 
 import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
 import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader";
+import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
+import PanelHeaderClose from "@vkontakte/vkui/dist/components/PanelHeaderClose/PanelHeaderClose";
+import Avatar from "@vkontakte/vkui/dist/components/Avatar/Avatar";
+
 import Button from "@vkontakte/vkui/dist/components/Button/Button";
 import Group from "@vkontakte/vkui/dist/components/Group/Group";
 import Div from "@vkontakte/vkui/dist/components/Div/Div";
 import { Redirect } from 'react';
 import Link from "@vkontakte/vkui/dist/components/Link/Link";
+import Icon24Flash from "@vkontakte/icons/dist/24/flash";
+
 
 const Panel1 = ({ id, navigator }) => {
 	const showSpinner = () => {
@@ -44,8 +50,9 @@ const Panel1 = ({ id, navigator }) => {
 	return (
 		<Panel id={id}>
 		<PanelHeader
-		 right={<PanelHeaderButton label={<Counter size="s" mode="prominent">21</Counter>}><Icon28PictureOutline/></PanelHeaderButton>}
-         >
+		  left={<PanelHeaderClose />}
+          right={<Avatar size={36} />}
+        >
             Главная страница
 		</PanelHeader>
 			<Group title="Основы навигации">

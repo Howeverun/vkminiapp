@@ -43,7 +43,9 @@ const Panel1 = ({ id, navigator }) => {
 
 	return (
 		<Panel id={id}>
-		<PanelHeader>
+		<PanelHeader
+		 right={<PanelHeaderButton label={<Counter size="s" mode="prominent">21</Counter>}><Icon28PictureOutline/></PanelHeaderButton>}
+         >
             Главная страница
 		</PanelHeader>
 			<Group title="Основы навигации">

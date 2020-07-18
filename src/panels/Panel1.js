@@ -50,7 +50,6 @@ const Panel1 = ({ id, navigator }) => {
 	return (
 		<Panel id={id}>
 		<PanelHeader
-		  left={<PanelHeaderClose />}
           right={<Avatar size={36} />}
         >
             Главная страница

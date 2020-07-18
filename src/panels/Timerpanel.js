@@ -9,6 +9,9 @@ import PropTypes from "prop-types";
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
 import {IOS} from "@vkontakte/vkui";
 
+import PanelHeaderClose from "@vkontakte/vkui/dist/components/PanelHeaderClose/PanelHeaderClose";
+import Avatar from "@vkontakte/vkui/dist/components/Avatar/Avatar";
+
 function tmp_output(min, sec) {
 	let division = document.getElementById("time")
 	let first = ""
@@ -63,7 +66,10 @@ function countdown(){
 
 const timerPanel = ({ id, navigator }) => (
 	<Panel id={id}>
-		<PanelHeader>
+		<PanelHeader
+		left={<PanelHeaderClose />}
+        right={<Avatar size={36} />}
+		>
 		    timeeeer
 		</PanelHeader>
 		<Group title="Параметры">

@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/vkminiapp/static/css/main.90b5fd88.chunk.css",
-    "main.js": "/vkminiapp/static/js/main.e6625063.chunk.js",
-    "main.js.map": "/vkminiapp/static/js/main.e6625063.chunk.js.map",
-    "runtime-main.js": "/vkminiapp/static/js/runtime-main.946394a3.js",
-    "runtime-main.js.map": "/vkminiapp/static/js/runtime-main.946394a3.js.map",
+    "main.css": "/vkminiapp/static/css/main.d8e0e204.chunk.css",
+    "main.js": "/vkminiapp/static/js/main.01745072.chunk.js",
+    "main.js.map": "/vkminiapp/static/js/main.01745072.chunk.js.map",
+    "runtime-main.js": "/vkminiapp/static/js/runtime-main.aafb90e5.js",
+    "runtime-main.js.map": "/vkminiapp/static/js/runtime-main.aafb90e5.js.map",
     "static/css/2.ed87aa75.chunk.css": "/vkminiapp/static/css/2.ed87aa75.chunk.css",
-    "static/js/2.59558cbf.chunk.js": "/vkminiapp/static/js/2.59558cbf.chunk.js",
-    "static/js/2.59558cbf.chunk.js.map": "/vkminiapp/static/js/2.59558cbf.chunk.js.map",
+    "static/js/2.214e5226.chunk.js": "/vkminiapp/static/js/2.214e5226.chunk.js",
+    "static/js/2.214e5226.chunk.js.map": "/vkminiapp/static/js/2.214e5226.chunk.js.map",
     "index.html": "/vkminiapp/index.html",
-    "precache-manifest.416809d99907493febbd9a37f056bbba.js": "/vkminiapp/precache-manifest.416809d99907493febbd9a37f056bbba.js",
+    "precache-manifest.18ed62e6411ffcd55a4323b303cf52ab.js": "/vkminiapp/precache-manifest.18ed62e6411ffcd55a4323b303cf52ab.js",
     "service-worker.js": "/vkminiapp/service-worker.js",
     "static/css/2.ed87aa75.chunk.css.map": "/vkminiapp/static/css/2.ed87aa75.chunk.css.map",
-    "static/css/main.90b5fd88.chunk.css.map": "/vkminiapp/static/css/main.90b5fd88.chunk.css.map",
-    "static/js/2.59558cbf.chunk.js.LICENSE.txt": "/vkminiapp/static/js/2.59558cbf.chunk.js.LICENSE.txt",
+    "static/css/main.d8e0e204.chunk.css.map": "/vkminiapp/static/css/main.d8e0e204.chunk.css.map",
+    "static/js/2.214e5226.chunk.js.LICENSE.txt": "/vkminiapp/static/js/2.214e5226.chunk.js.LICENSE.txt",
     "static/media/giphy.gif": "/vkminiapp/static/media/giphy.a4246afc.gif",
     "static/media/screen6.jpg": "/vkminiapp/static/media/screen6.3a1574d3.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.946394a3.js",
+    "static/js/runtime-main.aafb90e5.js",
     "static/css/2.ed87aa75.chunk.css",
-    "static/js/2.59558cbf.chunk.js",
-    "static/css/main.90b5fd88.chunk.css",
-    "static/js/main.e6625063.chunk.js"
+    "static/js/2.214e5226.chunk.js",
+    "static/css/main.d8e0e204.chunk.css",
+    "static/js/main.01745072.chunk.js"
   ]
 }
